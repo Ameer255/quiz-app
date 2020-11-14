@@ -5,7 +5,7 @@ export  const Quiz = (props)=>{
    
     return(
         <div className="box">
-            <h2><a href="#" > {props.category} </a></h2>
+            <h2>{props.category}</h2>
         
 
         </div>

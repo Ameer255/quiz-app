@@ -1,9 +1,49 @@
 import React from "react";
+import {useState} from "react";
+import { Question } from "../question/question";
 
 export const WebQuiz = ()=>{
-    return(
-        <div className="box">
-            here will be Web quiz
-        </div>
-    )
+
+    let [step, setStep] = useState(1);
+
+
+    let questions = [[], ["which one is an inline element..?"], 
+    ["which tag is used to display an image..?"],
+  ["which tag is used to connect external JavaScript file..?"],
+["There are 4 ways to style HTML elements..?"],
+["What is the correct way to find the length of an array in JS..?"]];
+
+    let options = [[], ["div", "section", "H1", "<a>"], 
+    ["pic", "image", "img", "photo"],
+     ["<script>", "<link>", "<Javascrip>"],
+    ["true", "false"],
+  ["Array.size", "Array.width", "Array.length", "sizeOf(Array)"]];
+
+    let answerKey = [[], ["<a>"], ["img"] ,["<script>"], ["false"], "Array.length"];
+    
+
+    const nextStep = () => {
+        setStep(step + 1 );
+      };
+    
+      const prevStep = () => {
+        setStep(step - 1 );
+      };
+
+       if(step >=1 && step <=5){
+           
+           return <Question
+            q={questions[step]}
+             next={nextStep} prev={prevStep}
+              step={step}
+               options={options[step]}
+               correct={answerKey[step]} />
+         
+           
+       }
+       else{
+         return <div style={{"textAlign": "center"}}><h2>Quiz Completed</h2></div>
+       }
+      
+    
 }
