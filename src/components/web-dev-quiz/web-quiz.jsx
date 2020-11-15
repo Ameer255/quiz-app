@@ -5,6 +5,11 @@ import { Question } from "../question/question";
 export const WebQuiz = ()=>{
 
     let [step, setStep] = useState(1);
+    let [correct, SetNumCorrect] = useState(0);
+
+    const addToCorrect = ()=>{
+      SetNumCorrect(correct+1);
+    }
 
 
     let questions = [[], ["which one is an inline element..?"], 
@@ -37,12 +42,15 @@ export const WebQuiz = ()=>{
              next={nextStep} prev={prevStep}
               step={step}
                options={options[step]}
-               correct={answerKey[step]} />
+               correct={answerKey[step]}
+               addToCorrect={addToCorrect} />
          
            
        }
        else{
-         return <div style={{"textAlign": "center"}}><h2>Quiz Completed</h2></div>
+       return <div style={{"textAlign": "center"}}>
+         <h2>Result : <br/>{`Correct : ${correct}`} <br/> {`Incorrect : ${5-correct}`}</h2>
+         </div>
        }
       
     
