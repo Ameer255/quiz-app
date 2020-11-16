@@ -4,7 +4,7 @@ export  const Quiz = (props)=>{
 
    
     return(
-        <div className="box">
+        <div >
             <h2>{props.category}</h2>
         
 
