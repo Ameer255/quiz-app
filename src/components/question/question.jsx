@@ -11,10 +11,10 @@ export const Question = (props) => {
 
     let correctAudio = new Audio();
     correctAudio.src = "../correct.mp3";
-    
-  
+
+
     let wrongAudio;
- 
+
 
     let [opt, setOpt] = useState("");
 
@@ -22,12 +22,12 @@ export const Question = (props) => {
         document.querySelector('form').elements['option'].forEach((element) => {
             if (element.checked) {
                 setOpt(element.value);
-               const wrongAudi = document.getElementsByClassName('audio')[0];
-              wrongAudi.load();
-               wrongAudi.play();
-               console.log(wrongAudi.play())
-               console.log(wrongAudi.source)
-                
+                //    const wrongAudi = document.getElementsByClassName('audio')[0];
+                //   wrongAudi.load();
+                //    wrongAudi.play();
+                //    console.log(wrongAudi.play())
+                //    console.log(wrongAudi.source)
+
 
             }
         })
@@ -42,11 +42,11 @@ export const Question = (props) => {
 
         if (opt == props.correct) {
             swal({
-                title : "Correct",
-                text : "Excellent.!",
-                icon : "success",
-                button : "Continue",
-                className : 'sa-sm'
+                title: "Correct",
+                text: "Excellent.!",
+                icon: "success",
+                button: "Continue",
+                className: 'sa-sm'
 
             })
             props.addToCorrect();
@@ -55,33 +55,48 @@ export const Question = (props) => {
 
         else {
             swal({
-                title : "Incorrect",
-                text : "Oh No..!",
-                icon : "warning",
-                button : "Continue",
-                dangerMode : true,
-                className : 'sa-sm'
+                title: "Incorrect",
+                text: "Oh No..!",
+                icon: "warning",
+                button: "Continue",
+                dangerMode: true,
+                className: 'sa-sm'
 
             });
-            
+
         }
 
         props.next();
         // wrongAudio.play();
     }
+    console.log(props.q);
 
     return (
-        <div className="question">
-            <h4>{props.q}</h4>
-    <div><h2>{`${props.step} / 5`}</h2></div>
+        <div className="question-container">
 
-            <form >
+            <div className="question-count">
+                <h4>{`${props.step} / 10`}</h4>
+            </div>
+
+            <div className="question">{props.q.map((element) => {
+                return (
+                    <h4> {element} </h4>
+                )
+            })}</div>
+
+
+
+            <form className="answer-form">
                 {props.options.map((option, index) => {
                     return (
-                        <div>
+                        <div className="options">
 
-                            <input type="radio" value={option} id={index} onChange={handleChange} name="option" />
-                            <label htmlFor={index}>{option}</label> <br />
+                            <div className="radio">
+                                <input type="radio" value={option} id={index} onChange={handleChange} name="option" />
+                            </div>
+                            <div className="label" htmlFor={index}>
+                                <label htmlFor={index}>{option}</label> <br />
+                            </div>
 
 
                         </div>
@@ -91,12 +106,12 @@ export const Question = (props) => {
 
             </form>
 
-            <div>
-                <button onClick={handleClick} disabled={props.step > 5}>Next</button>
-                <button onClick={props.prev} disabled={props.step <= 1}> Preveous</button>
+            <div className="check-btn">
+                <button onClick={handleClick} disabled={props.step > 7}>Check</button>
+
             </div>
             <audio className="audio">
-                <source src="https://gofile.io/d/L4e34L"/>
+                <source src="https://gofile.io/d/L4e34L" />
             </audio>
 
         </div>

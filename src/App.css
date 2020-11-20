@@ -1,74 +1,287 @@
-.App {
-  text-align: center;
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first-letter{
+  color: rgb(235, 59 ,90);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rem-letters{
+  color: rgb(75, 192, 189);
+}
+nav h1 span{
+  margin-right: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#hamberger{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: 0.5s ease;
+  display: none;
+
+
+}
+#hamberger span{
+   width: 100%;
+   height: 2px;
+   background-color: #f5eeef;
+   margin-top: 3px;
+   
 }
 
-.App-link {
-  color: #61dafb;
+.toggle .item1{
+   transform: rotate(45deg) translate(0px, 12px);
+}
+.toggle .item2{
+ opacity: 0;
+}
+.toggle .item3{
+ transform: rotate(-45deg) translate(0px, -12px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .box{
-  width : 25%;
+  width : 35%;
    margin: 20px 5%;
-    border : 2px solid red;
+   border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   color: rgb(22, 51, 70);
+   transition: .2s all ease-out;
+   border: 3px solid black;
+  
+}
+.box:hover{
+  background-color: rgb(22, 51, 70);
+  color: white;
 }
 .menu{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  transition: .2s all ease-in;
+}
+
+.question-container{
+  color: rgb(22, 51, 70);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 1s all ease-in-out;
+}
+
+
+.question-count{
+  background-color: rgb(100, 221, 23);
+  color: white;
+  width: 100%;
+  text-align: center;
+  box-shadow: 2px 3px 3px gray;
 }
 
 .question{
-  color: red;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.question button{
-  padding: 5px 8px;
-  border: none;
-  outline: none;
-  color: bisque;
-  background: rgb(21, 65, 122);
-  border-radius: 5px;
-  margin-right: 5px;
-}
-
-.sa-sm{
-  width:  200px !important;
-  height: 300px;
+  padding: 10px;
   
 }
+.answer-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.options{
+  display: flex;
+ margin-top: 2px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  min-width: 400px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s all ease;
+  background: rgb(247, 247, 247);
+  
+}
+
+.options:hover{
+  transform: scale(1.01);
+}
+.answer-form{
+  width: 100%;
+}
+
+.label{
+  padding: 10px;
+  width: 80%;
+}
+
+.label label{
+  cursor: pointer;
+}
+.radio{
+  width: 15%;
+  text-align: center;
+}
+
+.radio input{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.check-btn{
+  margin-top: 4%;
+}
+
+.check-btn button{
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgb(87, 207, 12);
+  border-radius: 3px;
+  margin-right: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.icon{
+  font-size: 100px;
+}
+
+.quiz-name{
+  text-align: center;
+  font-size: 2rem;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(22, 51, 70);
+  color: white;
+  padding: 0 8px;
+}
+.nav-sm{
+  display: none;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+ 
+}
+
+
+.nav-items{
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(22, 51, 70);
+}
+.result td, th{
+  border: 2px solid rgb(22, 51, 70);
+  text-align: center;
+  padding: 13px 35px;
+  font-weight: bold;
+  font-size: large;
+}
+.result th{
+  border-right: none;
+  margin-right: 0;
+}
+.result button{
+padding: 8px 18px;
+border: none;
+outline: none;
+color: white;
+background: rgb(22, 51, 70);
+border-radius: 5px;
+margin-right: 5px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 15px;
+}
+.correct{
+  color: rgb(87, 207, 12);
+}
+.incorrect{
+  color: rgb(226, 4, 45);
+}
+
+
+
+
+
+
+@media only screen and (max-width : 650px){
+    .menu{
+      flex-direction: column;
+      
+    }
+    .box{
+      width: 70%;
+      justify-content: space-around;
+      
+    }
+    
+      #hamberger{
+          display: flex;
+          transition: 0.5s ease;
+      }
+      #hamberger span{
+          transition: 0.5s ease;
+      }
+      #hamberger span:hover{
+          background-color: rgb(147, 229, 240);
+      }
+
+      .nav-items{
+        display: none;
+      }
+      nav{
+        justify-content: space-between;
+      }
+      .nav-sm{
+        color: white;
+        right: -400px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 0%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+        transition: 1s ease;
+        
+      }
+      .options{
+        min-width: 80%;
+      }
+      
+    .sa-sm{
+      width:  250px !important;
+}
+
+}
+
