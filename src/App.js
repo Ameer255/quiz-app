@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { GenQuiz } from "./components/general-quiz/gen-quiz";
 import { WebQuiz } from "./components/web-dev-quiz/web-quiz";
 import { Menu } from "./components/menu/menu";
+import { MathQuiz } from "./components/math-quiz/mathQuiz";
+import { EnglishQuiz } from "./components/english-quiz/englishQuiz";
 
 
 let navOpen = false;
@@ -46,7 +48,7 @@ function App() {
 
         <div className="nav-items">
           <div><Link to="/quiz-app" > Home </Link></div>
-          <div><Link to="/gen-quiz"> General Quiz </Link></div>
+          <div><Link to="/gen-quiz"> IQ Quiz </Link></div>
           <div><Link to="/web-quiz"> Web Quiz</Link></div>
         </div>
 
@@ -65,7 +67,7 @@ function App() {
       <div className="nav-sm">
         <div></div>
         <div><Link to="/quiz-app" onClick={navOpenClose}> Home </Link></div>
-        <div><Link to="/gen-quiz" onClick={navOpenClose}> General Quiz </Link></div>
+        <div><Link to="/gen-quiz" onClick={navOpenClose}> IQ Quiz </Link></div>
         <div><Link to="/web-quiz" onClick={navOpenClose}> Web Quiz</Link></div>
         <div></div>
 
@@ -75,6 +77,8 @@ function App() {
         <Route path="/quiz-app" exact component={Menu} />
         <Route path="/gen-quiz" exact component={GenQuiz} />
         <Route path="/web-quiz" exact component={WebQuiz} />
+        <Route path="/math-quiz" exact component={MathQuiz} />
+        <Route path="/english-quiz" exact component={EnglishQuiz} />
       </Switch>
 
     </BrowserRouter>

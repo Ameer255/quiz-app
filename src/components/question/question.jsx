@@ -75,12 +75,12 @@ export const Question = (props) => {
         <div className="question-container">
 
             <div className="question-count">
-                <h4>{`${props.step} / 10`}</h4>
+                <h3>{`${props.step} / 10`}</h3>
             </div>
 
             <div className="question">{props.q.map((element) => {
                 return (
-                    <h4> {element} </h4>
+                    <h2> {element} </h2>
                 )
             })}</div>
 
@@ -107,7 +107,7 @@ export const Question = (props) => {
             </form>
 
             <div className="check-btn">
-                <button onClick={handleClick} disabled={props.step > 7}>Check</button>
+                <button onClick={handleClick} >Check</button>
 
             </div>
             <audio className="audio">

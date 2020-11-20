@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { Quiz } from "../quiz-box/quiz-box";
+import { Link } from "react-router-dom";
+
 
 export const Menu = () => {
   return (
@@ -20,18 +20,38 @@ export const Menu = () => {
       <div className="box">
 
         <Link to="/gen-quiz">
-
           <div className="icon">
             <i class="fas fa-brain"></i>
           </div>
-
           <div className="quiz-name">
             <b>IQ Quiz</b>
           </div>
-
         </Link>
       </div>
 
+
+      <div className="box">
+        <Link to="/english-quiz">
+          <div className="icon">
+            <i class="fas fa-spell-check"></i>
+          </div>
+          <div className="quiz-name">
+            <b>English & Grammer</b>
+          </div>
+        </Link>
+      </div>
+
+
+      <div className="box">
+        <Link to="/math-quiz">
+          <div className="icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <div className="quiz-name">
+            <b>Maths</b>
+          </div>
+        </Link>
+      </div>
 
 
 

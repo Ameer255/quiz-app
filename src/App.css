@@ -1,5 +1,5 @@
 body{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .first-letter{
@@ -56,6 +56,7 @@ nav h1 span{
    color: rgb(22, 51, 70);
    transition: .2s all ease-out;
    border: 3px solid black;
+   padding: 5px 0;
   
 }
 .box:hover{
@@ -126,6 +127,8 @@ nav h1 span{
 
 .label label{
   cursor: pointer;
+  font-weight: bold;
+  font-size: x-large;
 }
 .radio{
   width: 15%;
@@ -152,10 +155,12 @@ nav h1 span{
   margin-right: 5px;
   font-weight: bold;
   cursor: pointer;
+  margin: 15px 0;
 }
 
 .icon{
   font-size: 100px;
+  text-align: center;
 }
 
 .quiz-name{
@@ -205,7 +210,7 @@ nav{
   text-align: center;
   padding: 13px 35px;
   font-weight: bold;
-  font-size: large;
+  font-size: x-large;
 }
 .result th{
   border-right: none;
@@ -221,7 +226,7 @@ border-radius: 5px;
 margin-right: 5px;
 font-weight: bold;
 cursor: pointer;
-margin-top: 15px;
+margin: 15px 0;
 }
 .correct{
   color: rgb(87, 207, 12);
