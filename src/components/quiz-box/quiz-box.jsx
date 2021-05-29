@@ -1,13 +1,13 @@
-import React from "react";
+// import React from "react";
 
-export  const Quiz = (props)=>{
+// export  const Quiz = (props)=>{
 
    
-    return(
-        <div >
-            <h2>{props.category}</h2>
+//     return(
+//         <div >
+//             <h2>{props.category}</h2>
         
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }

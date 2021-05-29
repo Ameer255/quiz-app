@@ -2,18 +2,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import swal from "sweetalert";
-
+import correct from "../resources/correct.mp3";
+import wrong from "../resources/wrong.mp3";
 
 
 
 
 export const Question = (props) => {
 
-    let correctAudio = new Audio();
-    correctAudio.src = "../correct.mp3";
+    let correctAudio = new Audio(correct);
 
 
-    let wrongAudio;
+
+    let wrongAudio = new Audio(wrong)
 
 
     let [opt, setOpt] = useState("");
@@ -21,20 +22,25 @@ export const Question = (props) => {
     useEffect(() => {
         document.querySelector('form').elements['option'].forEach((element) => {
             if (element.checked) {
-                setOpt(element.value);
-                //    const wrongAudi = document.getElementsByClassName('audio')[0];
-                //   wrongAudi.load();
-                //    wrongAudi.play();
-                //    console.log(wrongAudi.play())
-                //    console.log(wrongAudi.source)
-
-
+                setOpt(element.value)
+                
             }
-        })
+        });
+        return false;
+
     })
 
     const handleChange = (e) => {
-        setOpt(e.target.value);
+
+        if(e.target == e.currentTarget){
+        let id = e.target.id;
+        let inpt = document.querySelector("#"+id+' input');
+        inpt.checked = true;
+        setOpt(inpt.value);
+    }
+    else{
+        return false;
+    }
     }
 
 
@@ -50,13 +56,14 @@ export const Question = (props) => {
 
             })
             props.addToCorrect();
-            // wrongAudio.play();
+            correctAudio.play();
         }
 
         else {
+
             swal({
                 title: "Incorrect",
-                text: "Oh No..!",
+                text: `Oh No..! \n Correct answer was : ${props.correct}`,
                 icon: "warning",
                 button: "Continue",
                 dangerMode: true,
@@ -64,10 +71,11 @@ export const Question = (props) => {
 
             });
 
+            wrongAudio.play();
         }
 
         props.next();
-        // wrongAudio.play();
+
     }
     console.log(props.q);
 
@@ -78,9 +86,9 @@ export const Question = (props) => {
                 <h3>{`${props.step} / 10`}</h3>
             </div>
 
-            <div className="question">{props.q.map((element) => {
+            <div className="question">{props.q.map((element, index) => {
                 return (
-                    <h2> {element} </h2>
+                    <h2 key={index}> {element} </h2>
                 )
             })}</div>
 
@@ -89,13 +97,15 @@ export const Question = (props) => {
             <form className="answer-form">
                 {props.options.map((option, index) => {
                     return (
-                        <div className="options">
+                        <div className="options" key={index} id={"hello"+index} onClickCapture={handleChange}>
 
-                            <div className="radio">
-                                <input type="radio" value={option} id={index} onChange={handleChange} name="option" />
+                            <div className="radio" >
+                                <input type="radio" value={option} id={index} name="option"
+                                 onChange={(e)=>setOpt(e.target.value)} />
                             </div>
+
                             <div className="label" htmlFor={index}>
-                                <label htmlFor={index}>{option}</label> <br />
+                                <label htmlFor={index}>{option}</label> 
                             </div>
 
 
@@ -110,9 +120,6 @@ export const Question = (props) => {
                 <button onClick={handleClick} >Check</button>
 
             </div>
-            <audio className="audio">
-                <source src="https://gofile.io/d/L4e34L" />
-            </audio>
 
         </div>
     )

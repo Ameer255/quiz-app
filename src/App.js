@@ -74,8 +74,9 @@ function App() {
       </div>
 
       <Switch>
+      <Route path="/gen-quiz" exact component={GenQuiz} />
         <Route path="/quiz-app" exact component={Menu} />
-        <Route path="/gen-quiz" exact component={GenQuiz} />
+       
         <Route path="/web-quiz" exact component={WebQuiz} />
         <Route path="/math-quiz" exact component={MathQuiz} />
         <Route path="/english-quiz" exact component={EnglishQuiz} />

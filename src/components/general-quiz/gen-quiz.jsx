@@ -6,33 +6,31 @@ import { Question } from "../question/question";
 export const GenQuiz = () => {
 
 
-
-
-
-  let questions = [[], ["which one is an inline element..?"],
-  ["Which tag is used to display an image..?"],
-  ["Which tag is used to connect external JavaScript file..?"],
-  ["There are 4 ways to style HTML elements..?"],
-  ["Which one is the correct way to find the length of an array in JS..?"],
-  ["#FF3205 Is the representation of which color in Hexa..?"],
-  [[`What is the output of the following code..?`], ["let arr = [2,4,3,7,6];"], ["console.log(arr[arr.length-2])"]],
-  [["What is the output of follwing code..?"], ["console.log(typeof(null);"]],
-  ["In CSS3, class selector has higher specificity than ID selector..?"],
-  ["Select the correct way to apply styling for the hover state of a button..?"],
+  let questions = [[], ["Mary had a number of cookies, after eating one, she gave half of the remaining to her sister. After eating another cookie, she gave half of what was left to her brother. Mary now had only five cookies left, how many cookies did she start with..?"],
+  [["What number should replace the question mark..?"], ["0, 4, 2, 6, 3, 7, 3.5, ?"]],
+  ["The price of an item was cut 20% for a sale. By what percent must the item be increased to again sale the item at its original price.?"],
+  ["If the day before yesterday was thursday, when will sunday be..?"],
+  ["If sami stood 13th in a racing competition from both top and bottom of the list, how many participants were there in the race..? "],
+  ["A man faces north and covers 7 km, turns west and covers 2 km, then turns south and covers 4 km, again turns west and covers 2 km, how far is he from starting point..?"],
+  [`If the seventh day of the month is three days earlier than friday, what day will it be on the nineteenth day of that month..?`],
+  ["The old man's son is my son's uncle, what is the old man to me..?"],
+  ["12 is what percent of 80.?"],
+  ["The average age of four brothers is 12 years, if the age of their mother is also included, the average is increased by 5 years, The age of their mother (in years) is :"],
   [["What is the output of following code..?"], [`console.log(1 == "1");`]]];
 
-  let options = [[], ["div", "section", "H1", "<a>"],
-  ["pic", "image", "img", "photo"],
-  ["<script>", "<link>", "<Javascrip>"],
-  ["true", "false"],
-  ["Array.size", "Array.width", "Array.length", "sizeOf(Array)"],
-  ["Red", "Green", "Blue"], ["6", "7", "3", "4"], ["String", "Array", "Object", "Number"],
-  ["true", "false"], ["button hover {styles }", "button > hover {styles }",
-    "button :hover {styles }", "hover : button {styles}"],
-  ["true", "false"]];
+  let options = [[], ["23", "22", "11", "45"],
+  ["8", "7.5", "6.5", "6"],
+  ["30%", "40%", "25%", "20%"],
+  ["Tomorrow", "Day after tomorrow", "Today", "None"],
+  ["27", "26", "24", "25"],
+  ["20 km", "5 km", "15 km", "2 km"], 
+  ["Wednesday", "Monday", "Sunday", "Friday"],
+   ["Brother", "Father", "Son", "None"],
+  ["15%", "13%", "17%", "8%"], 
+  ["43", "48", "53", "37"]];
 
-  let answerKey = [[], ["<a>"], ["img"], ["<script>"], ["false"],
-  ["Array.length"], ["Red"], ["7"], ["Object"], ["false"], ["button :hover {styles }"], ["true"]];
+  let answerKey = [[], ["23"], ["7.5"], ["25%"], ["Tomorrow"],
+  ["25"], ["5 km"], ["Sunday"], ["Father"], ["15%"], ["37"]];
 
 
 
