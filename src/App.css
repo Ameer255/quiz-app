@@ -207,6 +207,9 @@ nav{
   align-items: center;
   color: rgb(22, 51, 70);
 }
+.result table{
+  border-collapse: collapse;
+}
 .result td, th{
   border: 2px solid rgb(22, 51, 70);
   text-align: center;
