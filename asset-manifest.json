@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/quiz-app/static/css/main.6dfcdeae.chunk.css",
+    "main.css": "/quiz-app/static/css/main.9cfa4588.chunk.css",
     "main.js": "/quiz-app/static/js/main.9b333fae.chunk.js",
     "main.js.map": "/quiz-app/static/js/main.9b333fae.chunk.js.map",
     "runtime-main.js": "/quiz-app/static/js/runtime-main.00d7b786.js",
@@ -10,7 +10,7 @@
     "static/js/3.d9b47897.chunk.js": "/quiz-app/static/js/3.d9b47897.chunk.js",
     "static/js/3.d9b47897.chunk.js.map": "/quiz-app/static/js/3.d9b47897.chunk.js.map",
     "index.html": "/quiz-app/index.html",
-    "static/css/main.6dfcdeae.chunk.css.map": "/quiz-app/static/css/main.6dfcdeae.chunk.css.map",
+    "static/css/main.9cfa4588.chunk.css.map": "/quiz-app/static/css/main.9cfa4588.chunk.css.map",
     "static/js/2.34af62de.chunk.js.LICENSE.txt": "/quiz-app/static/js/2.34af62de.chunk.js.LICENSE.txt",
     "static/media/correct.c08cf1c7.mp3": "/quiz-app/static/media/correct.c08cf1c7.mp3",
     "static/media/wrong.ffcc8b31.mp3": "/quiz-app/static/media/wrong.ffcc8b31.mp3"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.00d7b786.js",
     "static/js/2.34af62de.chunk.js",
-    "static/css/main.6dfcdeae.chunk.css",
+    "static/css/main.9cfa4588.chunk.css",
     "static/js/main.9b333fae.chunk.js"
   ]
 }
