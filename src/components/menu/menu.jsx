@@ -1,21 +1,21 @@
 import { QuizBox } from "./quizMenu";
-import img1 from "../../assets/images/sscode.png";
-import img2 from "../../assets/images/Screenshot (51).png";
-import img3 from "../../assets/images/Screenshot (52).png";
-import img4 from "../../assets/images/Screenshot (53).png";
+import PsychologyAltOutlinedIcon from '@mui/icons-material/PsychologyAltOutlined';
+import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
+import SpellcheckOutlinedIcon from '@mui/icons-material/SpellcheckOutlined';
+import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
 
 
 export const Menu = () => {
   return (
     <div className="menu">
 
-    <QuizBox linkTo="/web-quiz" img={img1} name=" Web Quiz"/>
+    <QuizBox linkTo="/web-quiz" icon={<CodeOutlinedIcon/>} name=" Web Quiz"/>
 
-    <QuizBox linkTo="/gen-quiz" img={img2} name="IQ Quiz"/>
+    <QuizBox linkTo="/gen-quiz" icon={<PsychologyAltOutlinedIcon/>} name="IQ Quiz"/>
 
-    <QuizBox linkTo="/english-quiz" img={img3} name="English & Grammer"/>
+    <QuizBox linkTo="/english-quiz" icon={<SpellcheckOutlinedIcon/>} name="English & Grammer"/>
 
-    <QuizBox linkTo="/math-quiz" img={img4} name="Maths"/>
+    <QuizBox linkTo="/math-quiz" icon={<CalculateOutlinedIcon/>} name="Maths"/>
     
 
     </div>

@@ -26,7 +26,7 @@ export const Result = ({correct})=>{
         </tbody>
       </table>
       <div>
-        <Link to="/"><button>Back To Quiz Home</button> </Link>
+        <Link to="/quiz-app"><button>Back To Quiz Home</button> </Link>
       </div>
 
     </div>
